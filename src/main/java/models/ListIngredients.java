@@ -7,6 +7,39 @@ public class ListIngredients  implements Ingredients{
 
     private List<Ingredient> ingredientList = new ArrayList<>();
 
+    public ListIngredients(){
+        Ingredient pickles = new Ingredient();
+        pickles.setId(1);
+        pickles.setTitle("Pickles");
+        pickles.setQuantity(3);
+        ingredientList.add(pickles);
+
+        Ingredient cheese = new Ingredient();
+        cheese.setId(2);
+        cheese.setTitle("Cheese");
+        cheese.setQuantity(1);
+        ingredientList.add(cheese);
+
+        Ingredient beefPatty = new Ingredient();
+        beefPatty.setId(3);
+        beefPatty.setTitle("Beef Patty");
+        beefPatty.setQuantity(1);
+        ingredientList.add(beefPatty);
+
+        Ingredient bun = new Ingredient();
+        bun.setId(4);
+        bun.setTitle("Bun");
+        bun.setQuantity(2);
+        ingredientList.add(bun);
+
+        Ingredient tomatoes = new Ingredient();
+        tomatoes.setId(5);
+        tomatoes.setTitle("Tomatoes");
+        tomatoes.setQuantity(2);
+        ingredientList.add(tomatoes);
+
+    }
+
     @Override
     public Ingredient findbyID(long id) {
         //get the Ingredient at the index 'id'

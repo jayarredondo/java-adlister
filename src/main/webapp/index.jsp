@@ -2,14 +2,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><%= "some title" %></title>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="McBurgers R' Us"/>
+    </jsp:include>
 </head>
 <body>
-    <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
-    </c:if>
-    <c:if test="false">
-        <h1>single letter variable names are good</h1>
-    </c:if>
+<jsp:include page="partials/navbar.jsp"/>
+<div class="container">
+    <h1>It's Burger Time!</h1>
+    <div class="list-group">
+        <c:forEach items="${allBurgers}" var="burger">
+            <a href="burgers/show?id=${burger.id}" class="list-group-item list-group-item-action">
+                <strong>${burger.title}</strong> - ${burger.description}
+            </a>
+        </c:forEach>
+    </div>
+</div>
+<%--could include a scripts jsp partial for CDN tags--%>
 </body>
 </html>

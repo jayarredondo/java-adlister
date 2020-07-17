@@ -11,6 +11,9 @@
 <div class="container">
     <h1>It's Burger Time!</h1>
     <div class="list-group">
+        <script type="text/javascript">
+            console.log("Hello this is working!")
+            console.log(${allBurgers})</script>
         <c:forEach items="${allBurgers}" var="burger">
             <a href="/burgers/show?id=${burger.id}" class="list-group-item list-group-item-action">
                 <strong>${burger.title}</strong> - ${burger.description}

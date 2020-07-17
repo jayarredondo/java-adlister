@@ -9,8 +9,7 @@ import java.io.IOException;
 public class AdsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("ads/index.jsp").forward(req, resp);
-
         req.setAttribute("ads", DaoFactory.getAdsDao().all());
+        req.getRequestDispatcher("ads/index.jsp").forward(req, resp);
     }
 }

@@ -14,10 +14,16 @@
     </jsp:include>
 </head>
 <body>
-<h1>Here are your Advertisements!</h1>
-<c:forEach items="${ads}" var="ad">
-        <h2>${ad.title}</h2>
-        <p>${ad.description}</p>
-</c:forEach>
+<div class="container">
+    <h1>Here are your Advertisements!</h1>
+    <c:forEach items="${ads}" var="ad">
+        <div class="row">
+            <div class="col">
+                <h2>${ad.title}</h2>
+                <p>${ad.description}</p>
+            </div>
+        </div>
+    </c:forEach>
+</div>
 </body>
 </html>

@@ -23,6 +23,8 @@
                 <strong>${ingredient.title}</strong>
             </a>
         </c:forEach>
-    </div></div>
+        <a href="/menu">Return to Menu</a>
+    </div>
+</div>
 </body>
 </html>

@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "IndexServlet", urlPatterns = "/")
+@WebServlet(name = "IndexServlet", urlPatterns = "/menu")
 public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class IndexServlet extends HttpServlet {
         allBurgers.add(burgersDao.findById(3));
 
         req.setAttribute("allBurgers", allBurgers);
-        req.getRequestDispatcher("../webapp/index.jsp").forward(req,resp);
+        req.getRequestDispatcher("/index.jsp").forward(req,resp);
 
     }
 }

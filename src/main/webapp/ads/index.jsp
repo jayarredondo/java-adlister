@@ -16,13 +16,12 @@
 <body>
 <div class="container">
     <h1>Here are your Advertisements!</h1>
+
     <c:forEach items="${ads}" var="ad">
-        <div class="row">
-            <div class="col">
+            <div class="col-md-6">
                 <h2>${ad.title}</h2>
                 <p>${ad.description}</p>
             </div>
-        </div>
     </c:forEach>
 </div>
 </body>

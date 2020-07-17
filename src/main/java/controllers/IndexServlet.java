@@ -1,6 +1,6 @@
 package controllers;
 
-import models.DAOFactory;
+import models.DaoFactory;
 import models.McBurger;
 import models.McBurgers;
 
@@ -19,7 +19,7 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Let's get all of the burgers that exist currently and list them here, 
         // with links to their individual product pages
-        McBurgers burgersDao = DAOFactory.getMcBurgersDao();
+        McBurgers burgersDao = DaoFactory.getMcBurgersDao();
 
         List<McBurger> allBurgers = new ArrayList<>();
         allBurgers.add(burgersDao.findById(1));

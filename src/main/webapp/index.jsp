@@ -12,12 +12,13 @@
     <h1>It's Burger Time!</h1>
     <div class="list-group">
         <c:forEach items="${allBurgers}" var="burger">
-            <a href="burgers/show?id=${burger.id}" class="list-group-item list-group-item-action">
+            <a href="/burgers/show?id=${burger.id}" class="list-group-item list-group-item-action">
                 <strong>${burger.title}</strong> - ${burger.description}
             </a>
         </c:forEach>
     </div>
 </div>
 <%--could include a scripts jsp partial for CDN tags--%>
+<%@include file="partials/scripts.jsp"%>
 </body>
 </html>

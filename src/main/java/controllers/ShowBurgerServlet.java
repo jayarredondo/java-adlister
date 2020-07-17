@@ -1,6 +1,6 @@
 package controllers;
 
-import models.DAOFactory;
+import models.DaoFactory;
 import models.McBurger;
 import models.McBurgers;
 
@@ -18,7 +18,7 @@ public class ShowBurgerServlet extends HttpServlet {
         // check for the burger ID attribute in the URL, need to parseLong to parse the string to a long
         long burgerId = Long.parseLong(req.getParameter("id"));
         // Create a connection to the DAOFactory
-        McBurgers burgerDao = DAOFactory.getMcBurgersDao();
+        McBurgers burgerDao = DaoFactory.getMcBurgersDao();
         // Get the burger by its ID, using findByID
         McBurger thisBurger = burgerDao.findById(burgerId);
         // Send that burger back to the JSP

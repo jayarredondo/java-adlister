@@ -4,7 +4,7 @@ package models;
 // This DAO class will provide access to our model data, but will not require
 // accessing the ListBurgersDAO / ListIngredientsDAO directly -- Instead,
 // we will reference those interfaces.
-public class DAOFactory {
+public class DaoFactory {
     private static McBurgers mcBurgersDao; // the mcBurger interface
 
     public static McBurgers getMcBurgersDao(){

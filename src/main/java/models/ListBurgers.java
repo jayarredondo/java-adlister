@@ -8,11 +8,11 @@ public class ListBurgers implements McBurgers{
     private List<McBurger> burgers = new ArrayList<>();
 
     public ListBurgers(){
-        Ingredient pickles = DAOFactory.getIngredientsDao().findbyID(1);
-        Ingredient cheese = DAOFactory.getIngredientsDao().findbyID(2);
-        Ingredient beefPatty = DAOFactory.getIngredientsDao().findbyID(3);
-        Ingredient bun = DAOFactory.getIngredientsDao().findbyID(4);
-        Ingredient tomatoes = DAOFactory.getIngredientsDao().findbyID(5);
+        Ingredient pickles = DaoFactory.getIngredientsDao().findbyID(1);
+        Ingredient cheese = DaoFactory.getIngredientsDao().findbyID(2);
+        Ingredient beefPatty = DaoFactory.getIngredientsDao().findbyID(3);
+        Ingredient bun = DaoFactory.getIngredientsDao().findbyID(4);
+        Ingredient tomatoes = DaoFactory.getIngredientsDao().findbyID(5);
 
         ArrayList<Ingredient> bigMacIngredients = new ArrayList<>();
 

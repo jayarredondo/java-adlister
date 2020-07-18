@@ -14,6 +14,7 @@
     </jsp:include>
 </head>
 <body>
+<%@include file="../partials/navbar.jsp"%>
 <div class="container">
     <h1>Here are your Advertisements!</h1>
 

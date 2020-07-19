@@ -10,6 +10,7 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
+        <script>alert("Welcome back ${sessionScope.user}!")</script>
     </div>
 
 </body>

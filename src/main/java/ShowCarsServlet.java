@@ -5,11 +5,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AdsServlet", urlPatterns = "/ads")
-public class AdsServlet extends HttpServlet {
+@WebServlet(name = "ShowCarsServlet", urlPatterns = "/cars")
+public class ShowCarsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("ads", DaoFactory.getAdsDao().all());
-        req.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(req, resp);
+
+        req.setAttribute("cars", DaoFactory.getCarsDao().callingAllCars());
+        req.getRequestDispatcher("/WEB-INF/cars/index.jsp").forward(req, resp);
     }
 }

@@ -5,7 +5,7 @@
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="../../index.jsp">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>

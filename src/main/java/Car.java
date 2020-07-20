@@ -11,6 +11,8 @@ public class Car {
         this.year = year;
     }
 
+    public Car(){}
+
     public long getId() {
         return id;
     }

@@ -24,5 +24,8 @@
         </div>
     </c:forEach>
 </div>
+<div class="container">
+    <h4><a href="/create-car">Create Car Ad</a></h4>
+</div>
 </body>
 </html>

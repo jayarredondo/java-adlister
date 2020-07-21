@@ -7,13 +7,13 @@ import java.util.List;
 public class JDBCTest {
     private static List<String> getEmployeeFirstNames() {
         List<String> firstNames = new ArrayList<>();
-
+        Config config = new Config();
         try {
             DriverManager.registerDriver(new Driver());
             Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/employees?serverTimezone=UTC&useSSL=false",
-                    "jayarredondo",
-                    "Jaw3som313!@#"
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
             Statement statement = conn.createStatement();
 

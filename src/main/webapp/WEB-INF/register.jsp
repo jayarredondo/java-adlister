@@ -10,7 +10,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Register Account" />
+        <jsp:param name="title" value="Register Account"/>
     </jsp:include>
 </head>
 <body>
@@ -31,6 +31,14 @@
         </div>
         <input type="submit" class="btn btn-primary btn-block" value="Create Account">
     </form>
+    <div>
+        <c:if test="${invalidUsername}">
+            <small>Sorry, that username is already taken.</small>
+        </c:if>
+        <c:if test="${fieldsMissing}">
+            <small>Please make sure all fields are completed.</small>
+        </c:if>
+    </div>
 </div>
 </body>
 </html>

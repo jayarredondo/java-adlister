@@ -1,4 +1,5 @@
 package com.codeup.adlister.dao;
+
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -25,25 +26,25 @@ public class MySQLUsersDao implements Users {
     @Override
     public User findByUsername(String username) {
         PreparedStatement stmt;
-        User searchedUser = null;
+        User searchedUser;
+        String findUserQuery = "SELECT * FROM users WHERE username = ? LIMIT 1";
         try {
-            String findUserQuery = "SELECT username FROM users WHERE username = ?";
             stmt = conn.prepareStatement(findUserQuery);
             stmt.setString(1, username);
             stmt.executeQuery();
             ResultSet rs = stmt.getResultSet();
             rs.next();
-
             searchedUser = new User(
                     rs.getLong("id"),
                     rs.getString("username"),
                     rs.getString("email"),
                     rs.getString("password")
             );
+            return searchedUser;
+
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Error finding user.", e);
         }
-        return searchedUser;
     }
 
     @Override
